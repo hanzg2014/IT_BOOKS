@@ -1,2 +1,1 @@
-# The C Programming Language
-solution programs
+# TCPL_2ed
