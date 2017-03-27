@@ -1,6 +1,6 @@
 ## IT_books
 
-
+|TCPL               |SICP               |DeepLearning from Scratch|
 |-------------------|-------------------|-------------------------|
 |![TCPL cover][TCPL]|![SICP cover][SICP]|![DLfromS cover][DLfromS]|
 
