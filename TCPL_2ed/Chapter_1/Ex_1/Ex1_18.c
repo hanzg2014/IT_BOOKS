@@ -4,8 +4,6 @@
 #include <stdio.h>
 #define MAXLINE 1000
 #define THRESHOLD_LENGTH 80
-#define IN 1
-#define OUT 0
 
 int get_line(char line[], int maxline);
 void copy(char to[], char from[]);

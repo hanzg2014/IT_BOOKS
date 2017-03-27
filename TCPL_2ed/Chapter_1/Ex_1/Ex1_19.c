@@ -5,23 +5,21 @@
 #define MAXLINE 1000
 
 int get_line(char line[], int maxline);
-void reverse(char s[]);
-void switch(char a, char b);
-void copy(char to[], char from[]);
-
+void reverse(char to[], char from[], int len);
 
 int main(){	
 	int len;
 
 	char line[MAXLINE];
-	char reversed[MAXLINE]
+	char reversed[MAXLINE];
 
-	while((len = get_line(line, MAXLINE)) > 0)
-		for (int i = 0; i <= (len - 1) / 2)
-			reversed[i] = line[len - 1 - i]
-		if(len >= 80){
-			printf("\n%s\n", line);
+	while((len = get_line(line, MAXLINE)) > 0){
+		if (len > 0){	//ignore the null string
+			reverse(reversed, line, len);
+			printf("\nReversed string: %s", reversed);
+			putchar('\n');
 		}
+	}
 	return 0;
 }
 
@@ -39,16 +37,16 @@ int get_line(char s[], int lim){
 	return i;
 }
 
-void reverse(char s[]){
+void reverse(char to[], char from[], int len_from){
+	int i, range;
 
+	if (from[len_from - 1] == '\n')		//if the original string ends with a '\n'
+		range = len_from - 1;
+	else	//if the original string ends with an EOF
+		range = len_from;
+
+	for(i = 0; i < range; i++)
+		to[range - 1 - i] = from[i];	//copy the original string in reversed order
+	to[range] = '\0';	//end the new string with a '\0'
 }
-
-void copy(char to[], char from[]){
-	int i;
-
-	i = 0;
-	while((to[i] = from[i])!='\0')
-		++i;
-}
-
 
