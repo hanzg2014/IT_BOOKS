@@ -1,0 +1,7 @@
+(define (square x) (* x x))
+(define (sum_of_squars_two a b) (+ (square a) (square b)))
+(define (square_of_largest_two_of_three a b c) 
+	(cond((and (< a b) (< a c)) (sum_of_squars_two b c))
+		((and (< b a) (< b c)) (sum_of_squars_two a c))
+		((and (< c a) (< c b)) (sum_of_squars_two a b)))
+	)
