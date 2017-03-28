@@ -3,6 +3,7 @@
 |TCPL               |SICP               |DeepLearning from Scratch|「プログラミングコンテストチャレンジングブック」2ed|
 |-------------------|-------------------|-------------------------|-------------------------------------------|
 |![TCPL cover][TCPL]|![SICP cover][SICP]|![DLfromS cover][DLfromS]|![ProCha2 cover][ProCha2]                  |
+|![TCPL cover][TCPL]|![SICP cover][SICP]|![DLfromS cover][DLfromS]|![ProCha2 cover][ProCha2]                  |
 
 [SICP]:https://img3.doubanio.com/lpic/s1463770.jpg
 [TCPL]:https://img3.doubanio.com/lpic/s7990521.jpg
