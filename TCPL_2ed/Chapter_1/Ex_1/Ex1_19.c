@@ -13,12 +13,10 @@ int main(){
 	char line[MAXLINE];
 	char reversed[MAXLINE];
 
-	while((len = get_line(line, MAXLINE)) > 0){
-		if (len > 0){	//ignore the null string
-			reverse(reversed, line, len);
-			printf("\nReversed string: %s", reversed);
-			putchar('\n');
-		}
+	while((len = get_line(line, MAXLINE)) > 0){	//ignore the null string
+		reverse(reversed, line, len);
+		printf("\nReversed string: %s", reversed);
+		putchar('\n');
 	}
 	return 0;
 }
