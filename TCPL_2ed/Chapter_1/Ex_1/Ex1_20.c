@@ -1,40 +1,23 @@
-//Ex1_20
+//Ex1_20	
 //Page 34
 
 #include <stdio.h>
 #define MAXLINE 1000
 #define TABSIZE 10
-#define TAB '\t'
-#define SPACE ' '
 
 char line[MAXLINE];
-char complete[MAXLINE];
+char result[MAXLINE];
 
 int get_line(char line[], int maxline);
-void space_complete(char to[], char from[], int len_from);
-
-int calculate_space(int pos, int tabsize){	//count how many spaces left until the next TAB stop		
-	return (TABSIZE - pos % TABSIZE);
-}
+int calculate_space(int pos, int tabsize);
+void detab(char to[], char from[], int len_from);
 
 int main(){	
 	int len;	
 	while((len = get_line(line, MAXLINE)) > 0){
 		if (len > 0){	//ignore the null string
-			int i, j, l, k;
-			for(i = 0, l = 0; i < len; i++){
-				if(line[i] == '\t'){
-					j = calculate_space(l, TABSIZE);
-					for (k = 0; k < j; k++){
-						putchar('-');
-						l++;
-					}
-				}
-				else{
-					putchar(line[i]);
-					l++;
-				}
-			}
+			detab(result, line, len);
+			printf("\n%s", result);
 		}
 		else
 			printf("\nnull string\n");
@@ -55,4 +38,26 @@ int get_line(char s[], int lim){
 
 	s[i] = '\0';
 	return i;
+}
+
+int calculate_space(int pos, int tabsize){	//count how many spaces left until the next TAB stop		
+	return (TABSIZE - pos % TABSIZE);
+}
+
+void detab(char to[], char from[], int len_from){
+	int i, j, l, k;	//i, index of from[]; j, number of ' ' still need to be filled in the current segmentation; l, index of to[]; k, count need to input ' '
+		for(i = 0, l = 0; i < len_from; i++){
+			if(from[i] == '\t'){	
+				j = calculate_space(l, TABSIZE);	//calculate how many spaces are still needed to be filled
+				for (k = 0; k < j; k++){
+					to[l] = '-';//print '-' for a corresponding number of times; use '-' instea of ' ', in order to make the result more obvious
+					l++;
+				}
+			}
+			else{
+				to[l] = from[i];
+				l++;
+			}
+		}
+		to[l] = '\0';
 }
