@@ -2,9 +2,9 @@
 
 |TCPL               |SICP               |DeepLearning from Scratch|「プログラミングコンテストチャレンジングブック」2ed|
 |-------------------|-------------------|-------------------------|-------------------------------------------|
-|![TCPL cover| center | 200x150][TCPL]|!![SICP cover| center | 200x150 ][SICP]|![DLfromS cover| center | 200x150 ][DLfromS]|![ProCha2 cover| center | 200x150 ][ProCha2]                  |
+|![TCPL cover| center | 200x0][TCPL]|!![SICP cover| center | 200x0 ][SICP]|![DLfromS cover| center | 200x0 ][DLfromS]|![ProCha2 cover| center | 200x0 ][ProCha2]                  |
 |Practical Python and OpenCV|Practical Python and OpenCV 2ed + Case Studies|
-|![PPandO cover| center | 200x150 ][PPandO]|![PPandO2C cover| center | 200x150 ][PPandO2C]|
+|![PPandO cover| center | 200x0 ][PPandO]|![PPandO2C cover| center | 200x0 ][PPandO2C]|
 
 
 [SICP]:https://img3.doubanio.com/lpic/s1463770.jpg
