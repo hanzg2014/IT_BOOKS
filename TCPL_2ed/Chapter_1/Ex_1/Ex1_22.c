@@ -47,32 +47,36 @@ void fold(char to[], char from[], int len_from){
     l = 0; //(relative)current head, index of the first character of the word currently under processing
 
     for(i = 0, j = 0, k = -1, l = 0, state = OUT; i < len_from; i++){
-        if (j < LINEFOLD ){ //still within one line
-            if ((from[i]!=' ') && (from[i]!='\t')){
-                if (state == OUT)
-                    l = j;
-                state = IN;
-                to[j] = from[i];
-                j++;
-            }
-            else{
-                if (state == IN)
+        to[j] = from[i];
+        
+        // if (j < LINEFOLD ){ //still within one line
+        if ((from[i]!=' ') && (from[i]!='\t')){
+            if (state == OUT)
+                l = j;
+            state = IN;
+            if(l >= LINEFOLD)   //
+            j++;
+        }
+        else{
+            if (state == IN)
+                if (j > LINEFOLD)
+                    
+                else
                     k = j - 1;
-                state = OUT;
-                to[j] = from[i];
-                j++;
-            }
+            state = OUT;   
+            j++;             
+        }
         }  
         else{
             k++;
             to[k] = '\n';
             k++;
             to[k] = '\0';
-            j = 0;
+            printf("\n%s", to);
+            j = j - ;
             k = -1;
             l = 0;
-            state = OUT
-            printf("\n%s", to);
+
         }
     }
     to[j] = '\0';   //final line of the folded lines
