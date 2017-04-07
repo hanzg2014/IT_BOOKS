@@ -1,5 +1,9 @@
-# pydata-book
-Materials and IPython notebooks for "Python for Data Analysis" by Wes McKinney, published by O'Reilly Media
+# 「Python for Data Analysis」/  Wes McKinney
+The book and my modified code of 「Python for Data Analysis」
+
+![PfDA cover][PfDA]
+[PfDA]:http://akamaicovers.oreilly.com/images/0636920023784/lrg.jpg
+
 
 ## IPython Notebooks:
 
