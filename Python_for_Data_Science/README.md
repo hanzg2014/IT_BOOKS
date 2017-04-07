@@ -2,7 +2,6 @@
 The book and my modified code of 「Python for Data Analysis」
 
 ![PfDA cover][PfDA]
-[PfDA]:http://akamaicovers.oreilly.com/images/0636920023784/lrg.jpg
 
 
 ## IPython Notebooks:
@@ -19,3 +18,6 @@ The book and my modified code of 「Python for Data Analysis」
 * [Chapter 12: Advanced NumPy](http://nbviewer.ipython.org/github/pydata/pydata-book/blob/master/ch12.ipynb)
 * [Python Appendix](http://nbviewer.ipython.org/github/pydata/pydata-book/blob/master/appendix_python.ipynb)
 * [2012 Federal Election Commission Database](http://nbviewer.ipython.org/github/pydata/pydata-book/blob/master/fec_study.ipynb)
+
+
+[PfDA]:http://akamaicovers.oreilly.com/images/0636920023784/lrg.jpg
