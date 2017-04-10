@@ -8,7 +8,7 @@ int main()
     char line[MAXLINE];
     while ((len = gline(line)) > 0) {
         for (i = 0, j = 0, ns = 0; j < len; j++)
-            if (line[j] != ' ') {
+            if (line[j] != ' ') {o
                 while (ns > 0) {
                     line[i++] = ' ';
                     ns--;
