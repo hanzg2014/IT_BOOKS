@@ -1,0 +1,1 @@
+opencv_traincascade.exe -data rj45xml-HOGv2 -vec rj45_24.vec -bg bg.txt  -numStages 16 -featureType LBP -minhitrate 0.995 -maxFalseAlarmRate 0.5 -numPos 200 -numNeg 1000 -w 24 -h 24 -mode ALL -precalcValBufSize 1024 -precalcIdxBufSize 2048
