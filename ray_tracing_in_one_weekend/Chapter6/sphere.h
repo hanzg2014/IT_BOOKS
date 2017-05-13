@@ -15,7 +15,7 @@ class sphere: public hitable  {
 
 bool sphere::hit(const ray& r, float t_min, float t_max, hit_record& rec) const {
     vec3 oc = r.origin() - center;
-    float a = dot(r.direction(), r.direction());
+    float a = dot(r.direction(), r.direction()); //some of the 2's in the formula of discriminant are cancelled out
     float b = dot(oc, r.direction());
     float c = dot(oc, oc) - radius*radius;
     float discriminant = b*b - a*c;

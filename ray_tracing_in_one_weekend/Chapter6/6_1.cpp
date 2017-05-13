@@ -28,9 +28,10 @@ int main(){
 	cout<<"P3\n"<<nx<<" "<<ny<<"\n255\n";
 
 	hitable *list[2];
-	list[0] = new sphere(vec3(0,0,-1),0.5, NULL);
-	list[1] = new sphere(vec3(0,-100.5,-1),100, NULL);
-	hitable *world = new hitable_list(list,2); //hitable_list class inherited hetable class, here hitable* type is OK
+	list[0] = new sphere(vec3(0,0,-1),0.5,NULL);
+	list[1] = new sphere(vec3(0,-100.5,-1),100,NULL);
+	hitable *world = new hitable_list(list, 2); //hitable_list class inherited hetable class, here hitable* type is OK
+	
 	camera cam;
 
 	for(int j = ny-1; j >= 0; j--){
@@ -53,3 +54,4 @@ int main(){
 		}
 	}
 }
+
