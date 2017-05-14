@@ -1,0 +1,6 @@
+tensorflow
+numpy
+sklearn
+requests
+jupyter
+matplotlib
