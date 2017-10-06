@@ -23,6 +23,8 @@ int main(){
 	clock_t start = clock();
 
 	bool flag = false;
+
+	//4-fold loop
 	for(int a = 0; a < n; a++){
 		if(flag)
 			break;
@@ -35,7 +37,7 @@ int main(){
 				for(int d = 0; d < n; d++){
 					if(k[a] + k[b] + k[c] + k[d] == m){
 						flag = true;
-						puts("It is possible");
+						printf("It is possible: %d + %d + %d + %d = %d", k[a], k[b], k[c], k[d], m);
 						break;
 					}
 				}
@@ -48,7 +50,7 @@ int main(){
 
 	clock_t end = clock();
 	
-	printf("Running time is %fs\n", (double)(end - start)/CLK_TCK);
+	printf("\nRunning time is %fs\n", (double)(end - start)/CLK_TCK);
 
 	return 0;
 }

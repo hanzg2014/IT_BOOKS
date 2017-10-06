@@ -27,7 +27,7 @@ int min(int a, int b){
 }
 
 int main(){   
-	int L, n, x[MAX_N], y[MAX_N];
+	int L, n, x[MAX_N];
 	int maxT = 0;
 	int minT = 0;
 
@@ -47,10 +47,12 @@ int main(){
 		minT = max(minT, min(x[i], L - x[i]));
 		maxT = max(maxT, max(x[i], L - x[i]));
 	}
-
-	printf("Maximum time is %ds, minimum time is %ds\n", maxT, minT);
-
+	
 	clock_t end = clock();
+
+	printf("Maximum time is %ds\n minimum time is %ds\n", maxT, minT);
+
+	
 	printf("Running time is %fs\n", (double)(end - start)/CLK_TCK);
 	return 0;
 }

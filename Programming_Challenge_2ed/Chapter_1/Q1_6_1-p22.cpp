@@ -1,4 +1,4 @@
-//Example 1_6_1
+//Example 1_6_1 "三角形"
 //Page 22
 
 #include <cstdio>
@@ -35,10 +35,10 @@ int main(){
 		for(int j = i + 1; j < n - 1; j++){
 			for(int k = j + 1; k < n; k++){
 				int len = a[i] + a[j] + a[k];
-				int ma = max(a[i], max(a[j],a[k]));
-				int rest = len - ma;
+				int max_len = max(a[i], max(a[j],a[k]));
+				int rest = len - max_len;
 
-				if (rest > ma)
+				if (rest > max_len)
 					ans = max(ans, len);
 			}
 		}
@@ -47,7 +47,7 @@ int main(){
 	if(ans == 0)
 		printf("No valid triangle\n");
 	else
-		printf("The largest perimeter is %d\n", ans);
+		printf("The longest perimeter is %d\n", ans);
 
 	clock_t end = clock();
 	printf("Running time is %fs\n", (double)(end - start)/CLK_TCK);
